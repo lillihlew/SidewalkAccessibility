@@ -1,0 +1,39 @@
+/*Assignment 6 (Report): Lilli Lewis
+ * 12/5/23
+ * Sources: I used the website below to learn how to remove the characters such as [, (, and , from the 
+ *  excel spreadsheet.
+ *   https://www.ablebits.com/office-addins-blog/remove-characters-from-string-excel/
+ * I confirm that the above list of sources is complete (none) AND that I/we have 
+ *  not talked to anyone else about the solution to this problem.*/
+
+Report: In a .txt file, include a description that explains how you processed your .csv file and which 
+accessibility attribute you decided to consider for your graph. (State how the graphs differ if you are 
+doing the extra points section.)
+I queried the entire csv from the website into an Excel sheet on my laptop, then copied the data into two 
+Excel sheets on Grinnell's provided Excel website, then followed the instructions given in the Assignment 
+page: 
+   "Split the coordinates in the “coordinates” column to extract “origin” and “destination”. Consider the first coordinate as the “origin”, the second coordinate as the “destination”, and ignore any extra coordinates.
+   Rename the column headers accordingly. The below steps may be useful (using MS Excel):
+   Select the cell or column that contains the text you want to split
+   Select Data > Text to Columns
+   In the Convert Text to Columns Wizard, select Delimited > Next
+   Select the Delimiters for your data. Use ‘)’ as a delimiter
+   Select Next
+   Select the Destination in your worksheet which is where you want the split data to appear
+   Select the accessibility attribute you want to consider as the “distance” for your shortest path algorithm.
+   Rename your selected column as “distance”. In the csv sample file given to you, “distance” is considered to be the access score."
+ Specifically for my data cleaning, I completed these Excel steps in the Grinnell-provided Excel sheets,
+then I used the website's advice above and used ctrl+h to replace all instances of commas, brackets, and
+parentheses. I then deleted all of the columns that I wasn't using in the project, and moved origin, 
+destination, and distance the columns A, B, and C respectively. Then I downloaded the data to my Downloads 
+folder, opened the xlsx in LibreOffice, used Save As to convert it to a csv, kept the recommended commas as 
+column delimiters and deleted the recommended quotation marks as line delimiters, opting for no line 
+delimiters. Finally, I imported the files to my Eclipse project using File->Import->File System -> Downloads, 
+and selecting the two files. I made two of these csv files. I then opened the files in Eclipse using right 
+click Open With->Text Editor, made sure the formatting was correct, and renamed the columns as recommended. 
+I chose to do this last step in Eclipse because I wanted to keep track of which distance variable I was 
+using in each dataset. Though the file names make it obvious, in AvgCurbRamp(1).csv I'm using Average Curb 
+Ramp as my distance variable, and in AvgObstacleScore.csv I'm using Average Obstacle Score as my distance 
+variable. The graphs should be exactly the same in terms of nodes and edges since I downloaded the data one 
+time then used the same data processing, just different distance scores. The only place where the data will
+differ should be the distance scores.
